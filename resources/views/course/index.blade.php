@@ -39,7 +39,7 @@
                                 <td>{{ $course->end_date }}</td>
                                 <td>{{ $course->start_time }}</td>
                                 <td>{{ $course->end_time }}</td>
-                                <td> Edit / Delete</td>
+                                <td> <a href=" {{ route('editCourse', $course->id) }} "> Edit</a> Delete</td>
                             </tr>
                         @endforeach
                     </table>

@@ -8,4 +8,5 @@ class Course extends Model
 {
     protected $fillable = ['name','start_time', 'end_time','start_date', 'end_date', 'course_category_id'];
 
+
 }

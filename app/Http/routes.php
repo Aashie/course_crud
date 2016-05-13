@@ -21,9 +21,17 @@ Route::group(['prefix' => 'admin'], function( ) {
 
     Route::get('/','AdminController@index');
     Route::get('course/add','CourseController@create');
-    Route::get('course', ['as' => 'courseList','uses' => 'CourseController@index'] );
+    Route::get('course', [
+    	'as' => 'courseList',
+    	'uses' => 'CourseController@index'
+    	] );
 
     Route::post('course',  ['as' => 'postCreateCourse','uses' => 'CourseController@postCreateCourse' ]);
+     Route::get('course/{id}/edit',['as' =>'editCourse', 'uses' =>'CourseController@edit']);
+     Route::post('course/{id}/save', [
+     	'as' => 'postUpdateCourse',
+     	'uses' => 'CourseController@update'
+     	] );
 
 
 });
